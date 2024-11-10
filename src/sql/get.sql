@@ -1,0 +1,1 @@
+SELECT * FROM tasks WHERE done <= ? ORDER BY id DESC

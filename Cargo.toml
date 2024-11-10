@@ -1,0 +1,15 @@
+[package]
+name = "todo"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dirs = "5.0.1"
+eframe = "0.29.1"
+sqlite = "0.36.1"
+
+[profile.release]
+strip = true
+opt-level = "z"
+lto = true
+panic = "abort"
