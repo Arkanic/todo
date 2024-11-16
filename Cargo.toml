@@ -11,5 +11,4 @@ sqlite = "0.36.1"
 [profile.release]
 strip = true
 opt-level = "z"
-lto = true
 panic = "abort"
