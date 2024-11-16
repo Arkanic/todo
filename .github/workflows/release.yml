@@ -31,12 +31,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Build Binary
-        uses: houseabsolute/actions-rust-cross@v0
+      - name: Setup rustup
+        uses: ningenMe/setup-rustup@v1.1.0
         with:
-          command: "build"
           target: ${{ matrix.platform.target }}
-          args: "--locked --release"
+      - name: Build Binary
+        run: cargo build --target ${{ matrix.platform.target}} --locked --release
       - name: Publish Artifacts and Release
         uses: houseabsolute/actions-rust-release@v0
         with:
