@@ -31,9 +31,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup rustup
-        uses: ningenMe/setup-rustup@v1.1.0
+      - name: Toolchain install
+        uses: dtolnay/rust-toolchain@v1
         with:
+          toolchain: stable
           target: ${{ matrix.platform.target }}
       - name: Build Binary
         run: cargo build --target ${{ matrix.platform.target}} --locked --release
