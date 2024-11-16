@@ -1,9 +1,6 @@
 # todo
 Features both CLI & GUI modes, uses small sqlite database stored in default local folder for persistence. Made to be small, simple, and to just... work without any hassle, for personal use.
 
-## Build
-`cargo build --release`, use binary located in target/release as you wish afterward - there is a bunch of optimizations for release builds so expect your compiler to fry itself for a bit making the final binary
-
 ## Usage
 ### CLI
 - `todo`, `todo list` (no options) lists unfinished tasks
@@ -15,6 +12,14 @@ Features both CLI & GUI modes, uses small sqlite database stored in default loca
 
 ### GUI
 Launch via `todo gui`, provides a simple immediate mode UI for interaction.
+
+## Install
+Either download a binary from the releases page, or follow the build steps below.
+
+## Build
+`cargo build --release`, use binary located in target/release as you wish afterward - there is a bunch of optimizations for release builds so expect your compiler to fry itself for a bit making the final binary
+
+
 
 ## Potential improvements
 - Switch to a non-immediate-mode gui library to save some resources?
